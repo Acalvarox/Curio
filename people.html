@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Curio – People</title>
+  <meta name="description" content="Meet the people behind Curio." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{--matte-black:#111;--silver-1:#e7e7ea;--silver-2:#cfd1d6;--silver-3:#b7bac1;
+      --metallic-accent:linear-gradient(135deg,#800020,#a52a2a,#b22222)}
+    body{color:var(--matte-black);background:linear-gradient(120deg,var(--silver-1),var(--silver-2) 40%,var(--silver-3));background-size:200% 200%;animation:sheen 18s ease-in-out infinite}
+    @keyframes sheen{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    .tag{background-image:var(--metallic-accent);color:#fff;border-radius:.5rem;padding:.2rem .55rem;font-size:.75rem;font-weight:700}
+  </style>
+</head>
+<body class="min-h-screen antialiased">
+  <header class="sticky top-0 bg-white/70 backdrop-blur border-b border-black/10 z-50">
+    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2"><div class="h-7 w-7 rounded bg-[var(--silver-2)]"></div><span class="font-extrabold text-lg">Curio</span></a>
+      <nav class="hidden md:flex gap-8"><a href="about.html" class="hover:text-red-700">About</a><a href="index.html#tracks" class="hover:text-red-700">Tracks</a></nav>
+    </div>
+  </header>
+
+  <section class="py-16 text-center">
+    <h1 class="text-4xl md:text-5xl font-extrabold">People</h1>
+    <p class="mt-3 text-lg text-black/70">Engineers, educators, creators. United by curiosity.</p>
+  </section>
+
+  <!-- Team grid -->
+  <section class="max-w-7xl mx-auto px-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 pb-20">
+    <!-- CARD (duplicate and replace placeholders as you add members) -->
+    <article class="rounded-2xl bg-white/70 border border-black/10 overflow-hidden">
+      <div class="h-44 w-full bg-[url('https://via.placeholder.com/800x400')] bg-cover bg-center"></div>
+      <div class="p-5">
+        <div class="flex items-center justify-between">
+          <h3 class="text-xl font-bold">Your Name</h3>
+          <span class="tag">Founder</span>
+        </div>
+        <p class="mt-2 text-sm leading-6">Short bio goes here. Keep it crisp: what you build, teach, or love.</p>
+        <div class="mt-3 flex gap-3 text-sm">
+          <a class="underline" href="#" target="_blank">LinkedIn</a>
+          <a class="underline" href="#" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Add more <article> blocks for teammates -->
+  </section>
+
+  <section class="bg-white/70 border-t border-black/10 py-12 text-center">
+    <a href="about.html" class="underline font-semibold">← Back to About</a>
+  </section>
+</body>
+</html>
