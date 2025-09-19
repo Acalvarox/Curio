@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Curio – About</title>
+  <meta name="description" content="About Curio: mission, people, and how to join the team." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Shared theme (matches homepage) */
+    :root{
+      --matte-black:#111111;
+      --silver-1:#e7e7ea; --silver-2:#cfd1d6; --silver-3:#b7bac1;
+      --metallic-accent:linear-gradient(135deg,#800020,#a52a2a,#b22222);
+    }
+    body{color:var(--matte-black);background:linear-gradient(120deg,var(--silver-1),var(--silver-2) 40%,var(--silver-3));background-size:200% 200%;animation:sheen 18s ease-in-out infinite}
+    @keyframes sheen{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    .btn-metallic{background-image:var(--metallic-accent);color:#fff;font-weight:700;border-radius:.75rem;padding:.6rem 1.1rem;display:inline-flex;align-items:center;gap:.5rem;box-shadow:0 3px 6px rgba(0,0,0,.2);transition:transform .15s ease,box-shadow .15s ease}
+    .btn-metallic:hover{transform:translateY(-2px);box-shadow:0 6px 12px rgba(0,0,0,.25)}
+  </style>
+</head>
+<body class="min-h-screen antialiased">
+  <!-- ================= HEADER ================= -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/50 border-b border-black/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Logo/Wordmark (click to go home) -->
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="h-7 w-7 rounded bg-[var(--silver-2)]"></div>
+        <span class="font-extrabold tracking-tight text-lg">Curio</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="about.html" class="font-medium hover:text-red-700">About</a>
+        <a href="index.html#tracks" class="font-medium hover:text-red-700">Tracks</a>
+        <a href="#contact" class="font-medium hover:text-red-700">Contact</a>
+      </nav>
+      <a href="index.html#tracks" class="btn-metallic">Get Started</a>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold">About Curio</h1>
+      <p class="mt-4 text-lg/8 max-w-3xl mx-auto">Curio blends exam strategy with real engineering thinking—so you learn deeply and perform brilliantly.</p>
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+        <!-- CTA links to the three detail pages -->
+        <a href="mission.html" class="btn-metallic">Our Mission</a>
+        <a href="people.html" class="btn-metallic">People</a>
+        <a href="join.html" class="btn-metallic">Join the Team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== QUICK OVERVIEW CARDS ============== -->
+  <section class="pb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-6">
+      <!-- Mission teaser -->
+      <article class="rounded-2xl bg-white/70 border border-black/10 p-6">
+        <h2 class="text-xl font-extrabold">Mission</h2>
+        <p class="mt-2 text-sm leading-6">We help ambitious learners master JAMB, A‑Levels, and engineering foundations with clean explanations and no fluff.</p>
+        <a href="mission.html" class="btn-metallic mt-4 inline-flex">Read Mission</a>
+      </article>
+      <!-- People teaser -->
+      <article class="rounded-2xl bg-white/70 border border-black/10 p-6">
+        <h2 class="text-xl font-extrabold">People</h2>
+        <p class="mt-2 text-sm leading-6">Meet the mentors and contributors behind Curio—engineers, educators, and creators.</p>
+        <a href="people.html" class="btn-metallic mt-4 inline-flex">Meet the Team</a>
+      </article>
+      <!-- Join teaser -->
+      <article class="rounded-2xl bg-white/70 border border-black/10 p-6">
+        <h2 class="text-xl font-extrabold">Join Us</h2>
+        <p class="mt-2 text-sm leading-6">Passionate about teaching and building? Explore roles, contribute content, or help run study sessions.</p>
+        <a href="join.html" class="btn-metallic mt-4 inline-flex">How to Join</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer id="contact" class="border-t border-black/10 bg-white/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h3 class="text-xl font-extrabold">Say hello</h3>
+        <p class="mt-2">Questions, ideas, or want to collaborate? We’d love to hear from you.</p>
+      </div>
+      <div class="md:text-right">
+        <a href="mailto:hello@curio.example" class="btn-metallic">Email Curio</a>
+      </div>
+    </div>
+    <div class="text-center text-xs py-6 text-black/60">© <script>document.write(new Date().getFullYear());</script> Curio. All rights reserved.</div>
+  </footer>
+</body>
+</html>
