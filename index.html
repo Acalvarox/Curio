@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Curio – Learn Boldly</title>
+  <meta name="description" content="Curio: JAMB prep, A-Levels mastery, and an Engineering Help Room—built for ambitious learners." />
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* -----------------------------------------
+       THEME TOKENS
+       - Metallic silver background
+       - Matte black text
+       - Metallic burgundy accent (deep, rich, elegant)
+       ----------------------------------------- */
+    :root{
+      --silver-1: #e7e7ea;      /* light metallic */
+      --silver-2: #cfd1d6;      /* mid metallic */
+      --silver-3: #b7bac1;      /* deeper metallic */
+      --matte-black: #111111;   /* text */
+      --metallic-accent: linear-gradient(135deg, #800020, #a52a2a, #b22222); /* metallic burgundy gradient */
+    }
+
+    /* Metallic brushed look using a subtle, animated gradient */
+    body{
+      color: var(--matte-black);
+      background: linear-gradient(120deg, var(--silver-1), var(--silver-2) 40%, var(--silver-3));
+      background-size: 200% 200%;
+      animation: sheen 18s ease-in-out infinite;
+    }
+    @keyframes sheen{ 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+
+    /* Metallic button styling */
+    .btn-metallic{
+      background-image: var(--metallic-accent);
+      color: #fff;
+      font-weight: 600;
+      border-radius: 0.75rem;
+      padding: 0.75rem 1.25rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .btn-metallic:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    }
+    .btn-metallic:active{
+      transform: translateY(0);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    /* Card hover */
+    .curio-card{ transition: transform .18s ease, box-shadow .18s ease; }
+    .curio-card:hover{ transform: translateY(-4px); box-shadow: 0 18px 35px rgba(0,0,0,.08); }
+
+    /* Placeholder image style */
+    .img-ph{ background: repeating-linear-gradient(45deg, #dfe2e6, #dfe2e6 12px, #cfd3d8 12px, #cfd3d8 24px); }
+  </style>
+</head>
+<body class="min-h-screen antialiased">
+  <!-- =======================
+       TOP NAVIGATION
+       ======================= -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo / Wordmark -->
+        <a href="#" class="flex items-center gap-2 group">
+          <div class="h-7 w-7 rounded bg-[var(--silver-2)]"></div>
+          <span class="font-extrabold tracking-tight text-lg">Curio</span>
+        </a>
+
+        <!-- Primary Nav -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="about.html" class="font-medium hover:text-red-700">About</a>
+          <a href="#tracks" class="font-medium hover:text-red-700">Tracks</a>
+          <a href="#contact" class="font-medium hover:text-red-700">Contact</a>
+        </nav>
+
+        <!-- CTA Button -->
+        <a href="#tracks" class="btn-metallic">
+          Get Started
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4"><path d="M13.5 4.5l6 6-6 6m6-6H4.5"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================= HERO ======================= -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 items-center gap-10">
+      <div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
+          Learn boldly. <span class="bg-clip-text text-transparent" style="background-image: var(--metallic-accent);">Ace relentlessly.</span>
+        </h1>
+        <p class="mt-5 text-lg/7 max-w-prose">
+          Curio is your launchpad for <strong>JAMB</strong>, <strong>A-Levels</strong>, and real-world <strong>Engineering</strong> mastery—guided practice, clean explanations, and a help room that actually helps.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#tracks" class="btn-metallic">Explore Tracks</a>
+          <a href="about.html" class="btn-metallic" style="background-image: linear-gradient(135deg,#f5f5f5,#dcdcdc,#f5f5f5); color:#111;">About Curio</a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl img-ph h-64 md:h-[22rem] shadow-inner"></div>
+    </div>
+  </section>
+
+  <!-- ======================= TRACKS ======================= -->
+  <section id="tracks" class="py-8 md:py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="text-2xl md:text-3xl font-extrabold">Pick your track</h2>
+        <a href="#contact" class="hidden sm:inline text-sm font-semibold hover:text-red-700">Questions? Contact us →</a>
+      </div>
+
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="curio-card rounded-2xl bg-white/70 border border-black/10 overflow-hidden">
+          <div class="img-ph h-44 w-full"></div>
+          <div class="p-5">
+            <h3 class="text-xl font-bold">JAMB Mastery</h3>
+            <p class="mt-2 text-sm leading-6">Short, surgical lessons. Timed drills. Exam tactics that actually show up. Replace this copy later with your real JAMB pitch.</p>
+            <div class="mt-4">
+              <a href="#" class="btn-metallic">Enter JAMB</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="curio-card rounded-2xl bg-white/70 border border-black/10 overflow-hidden">
+          <div class="img-ph h-44 w-full"></div>
+          <div class="p-5">
+            <h3 class="text-xl font-bold">A-Levels Precision</h3>
+            <p class="mt-2 text-sm leading-6">Topic-by-topic breakdowns, question banks, and curated walkthroughs. Replace with your A-Levels message.</p>
+            <div class="mt-4">
+              <a href="#" class="btn-metallic">Enter A-Levels</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="curio-card rounded-2xl bg-white/70 border border-black/10 overflow-hidden">
+          <div class="img-ph h-44 w-full"></div>
+          <div class="p-5">
+            <h3 class="text-xl font-bold">Engineering Help Room</h3>
+            <p class="mt-2 text-sm leading-6">Drop-in problem solving, mentorship, and code/math sanity checks. Replace this with your official copy.</p>
+            <div class="mt-4">
+              <a href="#" class="btn-metallic">Enter Help Room</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= MINI ABOUT ======================= -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="uppercase tracking-widest text-xs font-semibold text-black/70">Why Curio</p>
+      <h2 class="mt-2 text-2xl md:text-3xl font-extrabold">Built by engineers. Tuned for results.</h2>
+      <p class="mt-4 max-w-3xl mx-auto text-balance">
+        Curio blends exam strategy with real engineering thinking. Learn the concepts, then crush the tests. If you want the full origin story and philosophy, head to the About page.
+      </p>
+      <div class="mt-6">
+        <a href="about.html" class="btn-metallic" style="background-image: linear-gradient(135deg,#f5f5f5,#dcdcdc,#f5f5f5); color:#111;">Read the About Page</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer id="contact" class="border-t border-black/10 bg-white/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h3 class="text-xl font-extrabold">Ready to get moving?</h3>
+        <p class="mt-2">Ping us with your goals—JAMB, A-Levels, or that gnarly engineering problem set—and we’ll map your path.</p>
+      </div>
+      <div class="md:text-right">
+        <a href="mailto:hello@curio.example" class="btn-metallic">Email Curio</a>
+        <p class="mt-2 text-sm">(Replace with your real email or a form link.)</p>
+      </div>
+    </div>
+    <div class="text-center text-xs py-6 text-black/60">© <span id="year"></span> Curio. All rights reserved.</div>
+  </footer>
+
+  <script>
+    // Set footer year automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
