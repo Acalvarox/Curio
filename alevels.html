@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Curio – A-Levels Precision</title>
+  <meta name="description" content="Curio A-Levels prep – topic-by-topic breakdowns, curated walkthroughs, and exam mastery." />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root{
+      --matte-black: #111111;
+      --metallic-accent: linear-gradient(135deg, #800020, #a52a2a, #b22222); /* burgundy gradient */
+    }
+    body{
+      background: #f9f9fa;
+      color: var(--matte-black);
+    }
+    .btn-metallic{
+      background-image: var(--metallic-accent);
+      color: #fff;
+      font-weight: 600;
+      border-radius: 0.75rem;
+      padding: 0.5rem 1.25rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .btn-metallic:hover{ transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.25);}
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- =============== HEADER =============== -->
+  <header class="sticky top-0 bg-white/80 backdrop-blur z-50 border-b border-black/10">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+      <a href="index.html" class="font-extrabold text-lg">Curio</a>
+      <nav class="flex gap-6">
+        <a href="about.html" class="hover:text-red-700">About</a>
+        <a href="index.html#tracks" class="hover:text-red-700">Tracks</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =============== TOP INTRO =============== -->
+  <section class="py-16 text-center">
+    <h1 class="text-4xl font-extrabold">A-Levels Precision</h1>
+    <p class="mt-3 text-lg text-black/70">Topic-by-topic breakdowns, past questions, and exam strategies that work.</p>
+  </section>
+
+  <!-- =============== SUBJECTS GRID =============== -->
+  <section class="max-w-7xl mx-auto px-4 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 pb-16">
+    <div class="relative rounded-xl overflow-hidden shadow-lg">
+      <img src="https://via.placeholder.com/400x250" alt="Maths" class="w-full h-56 object-cover">
+      <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white">
+        <h3 class="text-2xl font-bold">Maths</h3>
+        <a href="#" class="btn-metallic mt-3">Enter</a>
+      </div>
+    </div>
+
+    <div class="relative rounded-xl overflow-hidden shadow-lg">
+      <img src="https://via.placeholder.com/400x250" alt="Physics" class="w-full h-56 object-cover">
+      <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white">
+        <h3 class="text-2xl font-bold">Physics</h3>
+        <a href="#" class="btn-metallic mt-3">Enter</a>
+      </div>
+    </div>
+
+    <div class="relative rounded-xl overflow-hidden shadow-lg">
+      <img src="https://via.placeholder.com/400x250" alt="Chemistry" class="w-full h-56 object-cover">
+      <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white">
+        <h3 class="text-2xl font-bold">Chemistry</h3>
+        <a href="#" class="btn-metallic mt-3">Enter</a>
+      </div>
+    </div>
+
+    <div class="relative rounded-xl overflow-hidden shadow-lg">
+      <img src="https://via.placeholder.com/400x250" alt="Biology" class="w-full h-56 object-cover">
+      <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white">
+        <h3 class="text-2xl font-bold">Biology</h3>
+        <span class="mt-3 bg-white/70 text-black font-semibold px-3 py-1 rounded">Coming Soon</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== MINI ABOUT AT BOTTOM =============== -->
+  <section class="bg-white/70 border-t border-black/10 py-16 text-center">
+    <h2 class="text-2xl font-extrabold">About Curio</h2>
+    <p class="mt-4 max-w-3xl mx-auto">
+      Curio blends exam strategy with real engineering thinking. Learn the concepts, then crush the tests. 
+      Our mission is to create bold learners who are ready to ace relentlessly.
+    </p>
+    <a href="about.html" class="btn-metallic mt-6 inline-flex">Read More</a>
+  </section>
+
+</body>
+</html>
